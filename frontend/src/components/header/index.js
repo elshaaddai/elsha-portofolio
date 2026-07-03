@@ -21,13 +21,16 @@ const Header = () => {
   }, []);
   return (
     <header className={showHeader ? "header show" : "header"}>
-      <h1>Elshaddai Grace Tambuwun</h1>
+      <h1>Hi, I'm Elsha</h1>
       <nav>
         <ol>
           <a href="#home">Home</a>
         </ol>
         <ol>
-          <a href="#profile">Profile</a>
+          <a href="#profile">About</a>
+        </ol>
+        <ol>
+          <a href="#experience">Experience</a>
         </ol>
         <ol>
           <a href="#project">Project</a>
