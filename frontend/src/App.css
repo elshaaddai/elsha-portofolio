@@ -228,6 +228,99 @@ button:hover{
   transform: translateY(-5px);
 }
 
+/* EXPERIENCE */
+.experience-container {
+  min-height: 100vh;
+
+}
+.top {
+  justify-content: center;
+  align-items: center;
+  color: #DD9E59;
+  text-align: center;
+}
+.top p {
+  color: #111;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  color: #DD9E59;
+  margin-top: 3%;
+}
+.stats-box {
+  text-align: center;
+  border-right: 1px solid #DD9E59;
+}
+.number {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+.exp-card {
+  padding: 24px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #F0D8A1;
+}
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.exp-left{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.exp-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.exp-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 2px;
+}
+.exp-org {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+.exp-date {
+  font-size: 13px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+.exp-desc {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.exp-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skill-chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid #DD9E59;
+  border-radius: 6px;
+  color: #374151;
+  background: transparent;
+}
+
 /* PROJECT */
 .project-container {
   min-height: 100vh;
