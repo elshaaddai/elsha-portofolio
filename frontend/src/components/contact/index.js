@@ -49,6 +49,7 @@ const Contact = () => {
   return (
     <div id="contact" className="contact-container">
       <h1>Contact Me</h1>
+      <p>Let's Connect!</p>
       <form className="contact-form" onSubmit={handleSubmit}>
         <input type="email" name="email" placeholder="Enter your email..." value={form.email} onChange={handleChange} required/>
         <textarea rows="6" name="message" placeholder="Write your message..." value={form.message} onChange={handleChange} required></textarea>

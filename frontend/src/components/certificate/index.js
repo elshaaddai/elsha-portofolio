@@ -4,52 +4,44 @@ import ACP from "../../assets/certificate/ACP.png";
 import Dicoding from "../../assets/certificate/dicoding.png";
 import Revou from "../../assets/certificate/revou.png";
 
+
 const Certificate = () => {
+  const certificates = [
+    {
+      img: Magang,
+      title: "Internship Certificate",
+      issuer: "Rumah Sakit Advent Manado"
+    },
+    {
+      img: ACP,
+      title: "Adobe Certified Professional",
+      issuer: "Adobe Photosop"
+    },
+    {
+      img: Dicoding,
+      title: "Basic Web Programming",
+      issuer: "Dicoding Indonesia"
+    },
+    {
+      img: Revou,
+      title: "Intro To Software Engineer",
+      issuer: "RevoU"
+    }
+  ]
   return (
     <div id="certificate" className="certi-container">
       <h1>Certificate</h1>
 
-      <div className="certi-card">
-        <img src={Magang} alt="Sertifikat Magang RSA" />
-        <div className="certi-text">
-          <h3>Internship Certificate</h3>
-          <p>
-            Completed internship program as Backend Developer and contributed to
-            REST API development and system integration.
-          </p>
-        </div>
-      </div>
-
-      <div className="certi-card">
-        <img src={ACP} alt="Sertifikasi Adobe Photoshop" />
-        <div className="certi-text">
-          <h3>Adobe Certified Professional</h3>
-          <p>
-            Certification in visual design and image editing using Adobe
-            Photoshop.
-          </p>
-        </div>
-      </div>
-
-      <div className="certi-card">
-        <img src={Dicoding} alt="Sertifikat Course Dicoding" />
-        <div className="certi-text">
-          <h3>Dicoding Certificate</h3>
-          <p>
-            Completed online learning program focused on modern web development.
-          </p>
-        </div>
-      </div>
-
-      <div className="certi-card">
-        <img src={Revou} alt="Sertifikat Course Revou" />
-        <div className="certi-text">
-          <h3>Revo U Certificate</h3>
-          <p>
-            Participated in intensive learning related to technology and digital
-            skills.
-          </p>
-        </div>
+      <div className="certi-list">
+        {certificates.map((certi, i) => (
+          <div className="certi-card" key={i}>
+            <img src={certi.img} alt={certi.title} className="certi-img" />
+            <div className="certi-text">
+              <h3>{certi.title}</h3>
+              <p>{certi.issuer}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

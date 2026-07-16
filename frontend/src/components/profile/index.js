@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img from "../../assets/img/my-profile.jpeg";
 import { FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 const Profile = () => {
+  const fullName = "Elshaddai Grace Tambuwun";
+  const [displayName, setDisplayName] = useState("");
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    if(index < fullName.length){
+      const timeout = setTimeout(() => {
+        setDisplayName((prev) => prev + fullName[index]);
+        setIndex((prev) => prev + 1);
+      }, 200);
+      return () => clearTimeout(timeout)
+    } else {
+      const reset = setTimeout(() => {
+        setDisplayName("");
+        setIndex(0);
+      }, 1500);
+      return () => clearTimeout(reset)
+    }
+  }, [index])
   return (
     <div id="profile" className="profile-container">
       <div className="profile-text">
         <p>Hi There, I'm</p>
-        <h1>Elshaddai Grace Tambuwun</h1>
+        <h1>
+          <span>{displayName}</span>
+          <span className="cursor">|</span>
+        </h1>
         <p>
           An Computer Science graduate with hands-on experience building REST
           APIs as a <span>Backend Developer intern</span>. Currently, I am
